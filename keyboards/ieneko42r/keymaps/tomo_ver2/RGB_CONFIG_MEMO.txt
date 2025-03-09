@@ -1,0 +1,92 @@
+#define RGB_MATRIX_KEYPRESSES // キー押下に反応
+#define RGB_MATRIX_KEYRELEASES // (キープレスではなく) キーリリースに反応します
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS // フレームバッファ効果を有効にする
+#define RGB_MATRIX_TIMEOUT 0 // RGB が自動的にオフになるまで待機するミリ秒数
+#define RGB_DISABLE_WHEN_USB_SUSPENDED // サスペンド時にエフェクトをオフにする
+#define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // タスク実行ごとのアニメーションで処理する LED の数を制限します (キーボードの応答性を高めます)
+#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // アニメーションが LED を更新する頻度をミリ秒単位で制限します。 16 (16ms) は 60fps に制限することに相当します (キーボードの応答性が向上します)。
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // LED の最大輝度を 255 のうち 200 に制限します。定義されていない場合、最大輝度は 255 に設定されます
+#define RGB_MATRIX_DEFAULT_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT // 何も設定されていない場合、デフォルト モードを設定します
+#define RGB_MATRIX_DEFAULT_HUE 0 // 何も設定されていない場合、デフォルトの色相値を設定します
+#define RGB_MATRIX_DEFAULT_SAT 255 // 何も設定されていない場合、デフォルトの彩度値を設定します
+#define RGB_MATRIX_DEFAULT_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS // 何も設定されていない場合、デフォルトの明るさの値を設定します
+#define RGB_MATRIX_DEFAULT_SPD 127 // 何も設定されていない場合、デフォルトのアニメーション速度を設定します
+#define RGB_MATRIX_DISABLE_KEYCODES // キーコードによる RGB マトリックスの制御を無効にします (機能を制御するにはコード関数を使用する必要があります)
+#define RGB_MATRIX_SPLIT { X, Y } // (オプション) 分割キーボードの場合、各半分に接続されている LED の数。 X = 左、Y = 右。
+// RGB_MATRIX_KEYPRESSES または RGB_MATRIX_KEYRELEASES が有効になっている場合は、SPLIT_TRANSPORT_MIRROR も有効にする必要があります
+#define RGB_TRIGGER_ON_KEYDOWN // キーが押されたときに RGB キープレス イベントをトリガーします。 これにより、RGB コントロールの応答性が向上します。 これにより、一部のボードで RGB が正しく機能しない場合があります。
+
+
+
+
+----
+#define RGB_MATRIX_KEYPRESSES // キー押下に反応
+#define RGB_MATRIX_KEYRELEASES // (キープレスではなく) キーリリースに反応します
+#define RGB_MATRIX_FRAMEBUFFER_EFFECTS // フレームバッファ効果を有効にする
+#define RGB_DISABLE_TIMEOUT 0 // RGB が自動的にオフになるまで待機するミリ秒数
+#define RGB_DISABLE_AFTER_TIMEOUT 0 // OBSOLETE: 効果を無効にするまで待機するティック数
+#define RGB_DISABLE_WHEN_USB_SUSPENDED // サスペンド時にエフェクトをオフにする
+#define RGB_MATRIX_LED_PROCESS_LIMIT (DRIVER_LED_TOTAL + 4) / 5 // タスク実行ごとのアニメーションで処理する LED の数を制限します (キーボードの応答性を高めます)
+#define RGB_MATRIX_LED_FLUSH_LIMIT 16 // アニメーションが LED を更新する頻度をミリ秒単位で制限します。 16 (16ms) は 60fps に制限することに相当します (キーボードの応答性が向上します)。
+#define RGB_MATRIX_MAXIMUM_BRIGHTNESS 200 // LED の最大輝度を 255 のうち 200 に制限します。定義されていない場合、最大輝度は 255 に設定されます
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_LEFT_RIGHT // 何も設定されていない場合、デフォルト モードを設定します
+#define RGB_MATRIX_STARTUP_HUE 0 // 何も設定されていない場合、デフォルトの色相値を設定します
+#define RGB_MATRIX_STARTUP_SAT 255 // 何も設定されていない場合、デフォルトの彩度値を設定します
+#define RGB_MATRIX_STARTUP_VAL RGB_MATRIX_MAXIMUM_BRIGHTNESS // 何も設定されていない場合、デフォルトの明るさの値を設定します
+#define RGB_MATRIX_STARTUP_SPD 127 // 何も設定されていない場合、デフォルトのアニメーション速度を設定します
+#define RGB_MATRIX_DISABLE_KEYCODES // キーコードによる RGB マトリックスの制御を無効にします (機能を制御するにはコード関数を使用する必要があります)
+#define RGB_MATRIX_SPLIT { X, Y } // (オプション) 分割キーボードの場合、各半分に接続されている LED の数。 X = 左、Y = 右。
+// RGB_MATRIX_KEYPRESSES または RGB_MATRIX_KEYRELEASES が有効になっている場合は、SPLIT_TRANSPORT_MIRROR も有効にする必要があります
+
+
+----
+RGB_MATRIX_NONE = 0、
+      RGB_MATRIX_SOLID_COLOR = 1, // 静的単一色相、速度サポートなし
+      RGB_MATRIX_ALPHAS_MODS, // 静的デュアル色相、スピードは二次色相の色相
+      RGB_MATRIX_GRADIENT_UP_DOWN, // 上から下への静的グラデーション、速度はグラデーションの変化量を制御
+      RGB_MATRIX_GRADIENT_LEFT_RIGHT, // 左から右への静的グラデーション、速度はグラデーションの変化量を制御します
+      RGB_MATRIX_BREATHING, // 単一色相の輝度サイクル アニメーション
+      RGB_MATRIX_BAND_SAT, // 左から右にスクロールする単一の色相バンドのフェージング彩度
+      RGB_MATRIX_BAND_VAL, // 左から右にスクロールする単一の色相バンドの明るさのフェード
+      RGB_MATRIX_BAND_PINWHEEL_SAT, // 単色相 3 ブレードの回転風車が彩度をフェード
+      RGB_MATRIX_BAND_PINWHEEL_VAL, // 単一色相 3 ブレードの回転する風車が明るさをフェード
+      RGB_MATRIX_BAND_SPIRAL_SAT, // 単色相回転スパイラル フェード彩度
+      RGB_MATRIX_BAND_SPIRAL_VAL, // 単一の色相回転スパイラルが明るさをフェード
+      RGB_MATRIX_CYCLE_ALL, // フル グラデーションを介してフル キーボードのソリッド色相が循環します
+      RGB_MATRIX_CYCLE_LEFT_RIGHT, // 左から右への完全グラデーション スクロール
+      RGB_MATRIX_CYCLE_UP_DOWN, // 上から下へのフル グラデーション スクロール
+      RGB_MATRIX_CYCLE_OUT_IN, // アウトからインへの完全なグラデーション スクロール
+      RGB_MATRIX_CYCLE_OUT_IN_DUAL, // 外側から内側にスクロールする完全なデュアル グラデーション
+      RGB_MATRIX_RAINBOW_MOVING_CHEVRON, // 完全グラデーション シェブロン形の左から右へのスクロール
+      RGB_MATRIX_CYCLE_PINWHEEL, // キーボードの中心にあるフルグラデーションの回転風車
+      RGB_MATRIX_CYCLE_SPIRAL, // キーボードの中心を囲む完全なグラデーション回転スパイラル
+      RGB_MATRIX_DUAL_BEACON, // キーボードの中心を中心に回転する完全なグラデーション
+      RGB_MATRIX_RAINBOW_BEACON, // キーボードの中心を中心に回転する完全にきついグラデーション
+      RGB_MATRIX_RAINBOW_PINWHEELS, // キーボードの 2 つの半分を回転させる完全なデュアル グラデーション
+      RGB_MATRIX_RAINDROPS, // 1 つのキーの色相をランダムに変更します
+      RGB_MATRIX_JELLYBEAN_RAINDROPS, // 1 つのキーの色相と彩度をランダムに変更します
+      RGB_MATRIX_HUE_BREATHING, // 色相は同時にわずかに上にシフトし、次に後ろにシフトします
+      RGB_MATRIX_HUE_PENDULUM, // 色相は波のように右にわずかにシフトし、次に左に戻ります
+      RGB_MATRIX_HUE_WAVE, // 色相はわずかに上にシフトし、次に右に波のように下に戻ります
+      RGB_MATRIX_PIXEL_FRACTAL, // 単色フラクタルで塗りつぶされたキーがエッジに向かって水平にパルスします
+      RGB_MATRIX_PIXEL_FLOW, // ランダムな色合いの LED 配線に沿って RGB フローをパルス化する
+      RGB_MATRIX_PIXEL_RAIN, // ランダムな色相でランダムに光るキー
+  #if defined(RGB_MATRIX_FRAMEBUFFER_EFFECTS)
+      RGB_MATRIX_TYPING_HEATMAP, // あなたの WPM はどれくらい熱くなっています!
+      RGB_MATRIX_DIGITAL_RAIN, // あの有名なコンピュータ シミュレーション
+  #endif
+  #if defined(RGB_MATRIX_KEYPRESSES) || 定義済み(RGB_MATRIX_KEYRELEASES)
+      RGB_MATRIX_SOLID_REACTIVE_SIMPLE, // ヒットしたキーを色相と値にパルスし、値をフェードアウトします
+      RGB_MATRIX_SOLID_REACTIVE, // 静的な単一の色相、シフトされた色相にヒットしたキーをパルスし、現在の色相にフェードします
+      RGB_MATRIX_SOLID_REACTIVE_WIDE // 単一のキー ヒットに近い色相と値のパルスが値をフェードアウトします
+      RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE // 複数のキー ヒットの近くで色相と値のパルスが発生し、値がフェード アウトします
+      RGB_MATRIX_SOLID_REACTIVE_CROSS // 色相と値は、単一のキー ヒットの同じ列と行をパルスし、値をフェードアウトします
+      RGB_MATRIX_SOLID_REACTIVE_MULTICROSS // 色相と値は、複数のキー ヒットの同じ列と行をパルスし、値をフェードアウトします
+      RGB_MATRIX_SOLID_REACTIVE_NEXUS // 単一のキー ヒットの同じ列と行で色相と値のパルスが離れ、値がフェード アウトします
+      RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS // 複数のキー ヒットの同じ列と行で色相と値のパルスが離れてから、値がフェード アウトします
+      RGB_MATRIX_SPLASH, // 単一のキー ヒットから離れた完全なグラデーションと値のパルスが値をフェードアウトします
+      RGB_MATRIX_MULTIPLASH, // 複数のキー ヒットから離れた完全なグラデーションと値のパルス、その後値がフェードアウトします
+      RGB_MATRIX_SOLID_SPLASH, // 単一のキー ヒットから色相と値のパルスが離れ、値がフェード アウトします
+      RGB_MATRIX_SOLID_MULTIPLASH, // 複数のキー ヒットから色相と値のパルスが離れ、値がフェード アウトします
+  #endif
+      RGB_MATRIX_EFFECT_MAX
