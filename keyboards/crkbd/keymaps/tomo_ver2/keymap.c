@@ -27,6 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  * Build command
  * make crkbd:tomo_ver2
+ * $ qmk compile -kb crkbd -km tomo_ver2
  *
  * Flashing example for this keyboard:
  * make crkbd:tomo_ver2:avrdude

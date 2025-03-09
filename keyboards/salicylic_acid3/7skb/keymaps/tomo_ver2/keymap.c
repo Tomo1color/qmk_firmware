@@ -84,6 +84,7 @@ enum custom_keycodes {
  *
  * Build command
  * $ make salicylic_acid3/7skb/rev1:tomo_ver2
+* $ qmk compile -kb salicylic_acid3/7skb/rev1 -km tomo_ver2
  *
  * Upload command
  * $ make salicylic_acid3/7skb/rev1:tomo_ver2:avrdude
