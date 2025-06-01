@@ -26,11 +26,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * https://github.com/qmk/qmk_firmware/blob/master/docs/keycodes.md
  *
  * Build command
- * make crkbd:tomo_ver2
- * $ qmk compile -kb crkbd -km tomo_ver2
+ * make crkbd:tomo_ver3
+ * $ qmk compile -kb crkbd -km tomo_ver3
  *
  * Flashing example for this keyboard:
- * qmk flash -kb crkbd/rev1 -km tomo_ver2
+ * qmk flash -kb crkbd/rev1 -km tomo_ver3
  *
  */
 typedef union {
@@ -107,26 +107,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,------------------------------------------------------.                    ,-----------------------------------------------------.
-      KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, JP_YEN,
+      KC_GRV,  KC_1,    KC_2,     KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN,
   //|---------+--------+---------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,  KC_QUES, KC_LABK, KC_RABK, KC_MINS, KC_EQL,                       KC_COLN, KC_DQT,  XXXXXXX, KC_LBRC, KC_RBRC, KC_PIPE,
+      KC_LCTL, KC_QUES, KC_LABK,  KC_RABK, KC_MINS, KC_EQL,                       KC_COLN, KC_QUOT, XXXXXXX, KC_LBRC, KC_RBRC, KC_PIPE,
   //|---------+--------+---------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, KC_QUOT, KC_PLUS,                      XXXXXXX, KC_QUOT, XXXXXXX, KC_LCBR, KC_RCBR, KC_BSLS,
+      _______, XXXXXXX, XXXXXXX,  XXXXXXX, KC_UNDS, KC_PLUS,                      XXXXXXX, KC_DQT,  XXXXXXX, KC_LCBR, KC_RCBR, _______,
   //|---------+--------+---------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                        US_TO_JIS,   SFTSP, KC_LSFT,    XXXXXXX, XXXXXXX, XXXXXXX
-                                      //`--------------------------'  `--------------------------'
+                                            KC_LGUI,   SFTSP, KC_LSFT,    XXXXXXX, XXXXXXX, US_TO_JIS
+                                        //`--------------------------'  `--------------------------'
   ),
 
   [3] = LAYOUT_split_3x6_3(
   //,-------------------------------------------------------.                    ,------------------------------------------------------.
-      JPZKHK,  XXXXXXX,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     _______,
+      JPZKHK,  XXXXXXX,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
       CTR2F11, SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI, KC_F10,                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
       _______, CTL_Z,     CTL_X,   CTL_C,   CTL_V,   XXXXXXX,                      KC_UNDS, KC_DEL,  _______, _______, _______, _______,
   //|--------+----------+--------+--------+--------+--------+--------|  |--------+---------+--------+--------+--------+--------+--------|
-                                               QK_BOOT, XXXXXXX, XXXXXXX,    CMDSP, KC_BSPC, KC_LALT
-                                           //`--------------------------'  `--------------------------'
+                                          QK_BOOT, XXXXXXX, JIS_TO_US,    CMDSP, KC_BSPC, KC_LALT
+                                        //`--------------------------'  `--------------------------'
   )
 };
 
