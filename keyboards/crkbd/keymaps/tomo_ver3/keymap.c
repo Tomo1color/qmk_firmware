@@ -86,7 +86,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-----------+--------+--------+--------+--------+--------|                    |--------+--------+---------+--------+--------+---------------|
       CTR2TB,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                          KC_H,   KC_J,    KC_K,     KC_L,    KC_SCLN, LCTL_T(KC_ENT),
   //|-----------+--------+--------+--------+--------+--------|                    |--------+--------+---------+--------+--------+---------------|
-      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                          KC_N,   KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, KC_RSFT,
+      KC_LSFT,   KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                          KC_N,   KC_M,    KC_COMM,  KC_DOT,  KC_SLSH, MT(MOD_RSFT, KC_SLSH),
   //|-----------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+---------+--------+--------+---------------|
                                           GUIDEL, LT(3, KC_SPC), SF2SP,   MO(1), MO(2), KC_RALT
                                          //`--------------------------'  `--------------------------'
@@ -111,7 +111,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------+--------+---------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LCTL, KC_QUES, KC_LABK,  KC_RABK, KC_MINS, KC_EQL,                       KC_COLN, KC_QUOT, XXXXXXX, KC_LBRC, KC_RBRC, KC_PIPE,
   //|---------+--------+---------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX,  XXXXXXX, KC_UNDS, KC_PLUS,                      XXXXXXX, KC_DQT,  XXXXXXX, KC_LCBR, KC_RCBR, _______,
+      _______, XXXXXXX, XXXXXXX,  XXXXXXX, KC_UNDS, KC_PLUS,                      XXXXXXX, KC_DQT,  _______, _______, _______, _______,
   //|---------+--------+---------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                             KC_LGUI,   SFTSP, KC_LSFT,    XXXXXXX, XXXXXXX, US_TO_JIS
                                         //`--------------------------'  `--------------------------'
