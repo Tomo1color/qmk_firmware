@@ -83,7 +83,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         JPZKHK,  KC_NO,  KC_F2,  KC_F3,   KC_F4,   KC_F5,  KC_NO, KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
         CTR2F11, SF2F12, SGUI_L, GUI_BS,  KC_LGUI, KC_F10, KC_NO, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
         _______, CTL_Z,  CTL_X,  CTL_C,   CTL_V,   KC_NO,  KC_NO, KC_UNDS, KC_DEL,  KC_NO,   KC_NO,   KC_PGUP, KC_RSFT,
-      JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,     KC_NO, KC_RSFT,       KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
+      JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,      KC_NO, CMDSP,      KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
     ),
 
     [_RAISE] = LAYOUT(
