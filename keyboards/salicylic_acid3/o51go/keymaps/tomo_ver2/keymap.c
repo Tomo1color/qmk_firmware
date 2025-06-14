@@ -76,28 +76,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_ESC,   KC_Q,   KC_W,    KC_E,    KC_R, KC_T, KC_NO, KC_Y, KC_U, KC_I,    KC_O,   KC_P,    KC_BSPC,
         CTR2TB,   KC_A,   KC_S,    KC_D,    KC_F, KC_G, KC_NO, KC_H, KC_J, KC_K,    KC_L,   KC_SCLN, KC_ENT,
         KC_LSFT,  KC_Z,   KC_X,    KC_C,    KC_V, KC_B, KC_NO, KC_N, KC_M, KC_COMM, KC_DOT, KC_UP,   MT(MOD_RSFT, KC_SLSH),
-        KC_ENT,   KC_DEL, KC_LALT, KC_LGUI, LT(_ADJUST, KC_SPC), SF2SP, SF2SP, MO(_RAISE), KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT
+        KC_ENT,   KC_DEL, KC_LALT, KC_LGUI, LT(_LOWER, KC_SPC), KC_LSFT, KC_RSFT, MO(_RAISE), KC_RALT, KC_LEFT, KC_DOWN, KC_RGHT
     ),
 
     [_LOWER] = LAYOUT(
-        KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_NO, KC_6,    KC_7,  KC_8,  KC_9,  KC_0,  _______,
-        KC_LCTL,   KC_SLSH, KC_DOT,  KC_COMM, KC_MINS, KC_EQL,  KC_NO, KC_COLN, KC_NO, KC_NO, KC_NO, KC_NO, _______,
-        _______,   KC_NO,   KC_NO,   KC_NO,   KC_UNDS, KC_PLUS, KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
-        JIS_TO_US, _______, _______, _______, KC_SPC,     SF2SP,    KC_NO,       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
+        JPZKHK,  KC_NO,  KC_F2,  KC_F3,   KC_F4,   KC_F5,  KC_NO, KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
+        CTR2F11, SF2F12, SGUI_L, GUI_BS,  KC_LGUI, KC_F10, KC_NO, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
+        _______, CTL_Z,  CTL_X,  CTL_C,   CTL_V,   KC_NO,  KC_NO, KC_UNDS, KC_DEL,  KC_NO,   KC_NO,   KC_PGUP, KC_RSFT,
+      JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,     KC_NO, KC_RSFT,       KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
     ),
 
     [_RAISE] = LAYOUT(
         KC_GRV,   KC_1,     KC_2,    KC_3,    KC_4,    KC_5,    KC_NO, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN,
         KC_LCTL,  KC_SLSH,  KC_DOT,  KC_COMM, KC_MINS, KC_EQL,  KC_NO, KC_COLN, KC_QUOT, KC_TILD, KC_LBRC, KC_RBRC, KC_PIPE,
         _______,  KC_QUES,  KC_LABK, KC_RABK, KC_UNDS, KC_PLUS, KC_NO, KC_NO,   KC_DQT,  KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
-        US_TO_JIS, _______, _______, _______, KC_LSFT,     SFTSP,  KC_NO,       KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+        US_TO_JIS, _______, _______, _______, KC_LSFT,     KC_LSFT,  KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
     ),
 
     [_ADJUST] = LAYOUT(
         JPZKHK,  KC_NO,  KC_F2,  KC_F3,   KC_F4,   KC_F5,  KC_NO, KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
         CTR2F11, SF2F12, SGUI_L, GUI_BS,  KC_LGUI, KC_F10, KC_NO, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
         _______, CTL_Z,  CTL_X,  CTL_C,   CTL_V,   KC_NO,  KC_NO, KC_UNDS, KC_DEL,  KC_NO,   KC_NO,   KC_PGUP, KC_RSFT,
-      JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,     KC_LSFT, CMDSP,       KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
+      JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,     KC_NO, KC_RSFT,       KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
     )
 };
 
