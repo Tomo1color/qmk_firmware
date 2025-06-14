@@ -81,16 +81,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_LOWER] = LAYOUT(
         JPZKHK,  KC_NO,  KC_F2,  KC_F3,   KC_F4,   KC_F5,  KC_NO, KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
-        CTR2F11, SF2F12, SGUI_L, GUI_BS,  KC_LGUI, KC_F10, KC_NO, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
-        _______, CTL_Z,  CTL_X,  CTL_C,   CTL_V,   KC_NO,  KC_NO, KC_UNDS, KC_DEL,  KC_NO,   KC_NO,   KC_PGUP, KC_RSFT,
+        CTR2F11, SF2F12, SGUI_L, GUI_BS,  KC_LGUI, KC_F10, KC_NO, KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, KC_ENT,
+        KC_LSFT, CTL_Z,  CTL_X,  CTL_C,   CTL_V,   KC_NO,  KC_NO, KC_UNDS, KC_DEL,  KC_NO,   KC_NO,   KC_PGUP, KC_RSFT,
       JIS_TO_US,   KC_NO,  KC_NO,  QK_BOOT, KC_NO,      KC_NO, CMDSP,      KC_BSPC,  KC_RALT, KC_HOME, KC_PGDN, KC_END
     ),
 
     [_RAISE] = LAYOUT(
-        KC_GRV,   KC_1,     KC_2,    KC_3,    KC_4,    KC_5,    KC_NO, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN,
-        KC_LCTL,  KC_SLSH,  KC_DOT,  KC_COMM, KC_MINS, KC_EQL,  KC_NO, KC_COLN, KC_QUOT, KC_TILD, KC_LBRC, KC_RBRC, KC_PIPE,
-        _______,  KC_QUES,  KC_LABK, KC_RABK, KC_UNDS, KC_PLUS, KC_NO, KC_NO,   KC_DQT,  KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
-        US_TO_JIS, _______, _______, _______, KC_LSFT,     KC_LSFT,  KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
+        KC_GRV,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_NO, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN,
+        KC_LCTL,   KC_SLSH, KC_COMM, KC_DOT,  KC_MINS, KC_EQL,  KC_NO, KC_COLN, KC_QUOT, KC_TILD, KC_LBRC, KC_RBRC, KC_PIPE,
+        KC_LSFT,   KC_QUES, KC_LABK, KC_RABK, KC_UNDS, KC_PLUS, KC_NO, KC_NO,   KC_DQT,  KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
+        US_TO_JIS, KC_DEL,  KC_LALT, KC_LGUI, KC_LSFT,     KC_LSFT,  KC_NO,     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
     ),
 
     [_ADJUST] = LAYOUT(

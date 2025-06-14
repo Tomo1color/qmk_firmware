@@ -101,7 +101,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
       _______, CTL_Z,     CTL_X,   CTL_C,   CTL_V,   XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX, _______,
   //|--------+----------+--------+--------+--------+--------+--------|  |--------+---------+--------+--------+--------+--------+--------|
-                                            QK_BOOT, XXXXXXX, XXXXXXX,    KC_RSFT, KC_BSPC, KC_LALT
+                                            QK_BOOT, XXXXXXX, XXXXXXX,    CMDSP, KC_BSPC, KC_LALT
                                         //`--------------------------'  `--------------------------'
   ),
 
@@ -109,9 +109,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,------------------------------------------------------.                      ,-----------------------------------------------------.
       KC_GRV,  KC_1,    KC_2,     KC_3,    KC_4,    KC_5,                          KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN,
   //|---------+--------+---------+--------+--------+--------|                     |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, KC_SLSH, KC_DOT,   KC_COMM, KC_MINS, KC_EQL,                        KC_COLN, KC_QUOT, KC_TILD, KC_LBRC, KC_RBRC, KC_PIPE,
+      KC_LCTL, KC_SLSH, KC_COMM,  KC_DOT,  KC_MINS, KC_EQL,                        KC_COLN, KC_QUOT,  KC_TILD, KC_LBRC, KC_RBRC, KC_PIPE,
   //|---------+--------+---------+--------+--------+--------|                     |--------+--------+--------+--------+--------+--------|
-      _______, KC_QUES, KC_LABK,  KC_RABK, KC_UNDS, KC_PLUS,                       XXXXXXX, KC_DQT,  _______, _______, _______, _______,
+      _______, KC_QUES, KC_LABK,  KC_RABK, KC_UNDS, KC_PLUS,                       XXXXXXX, XXXXXXX, _______, _______, _______, _______,
   //|---------+--------+---------+--------+--------+--------+--------|  |---------+--------+--------+--------+--------+--------+--------|
                                             KC_LGUI, KC_LSFT, KC_LSFT,    JIS_TO_US, XXXXXXX, US_TO_JIS
                                         //`--------------------------'  `-----------------------------'
