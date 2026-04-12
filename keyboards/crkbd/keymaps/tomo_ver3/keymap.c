@@ -50,15 +50,15 @@ enum custom_keycodes {
   QAA
 };
 
-#define GUIDEL LGUI_T(KC_DEL)
-
 #define CTR2TB MT(MOD_LCTL, KC_TAB)
+#define GUIDEL LGUI_T(KC_DEL)
+#define ALTTAB LALT_T(KC_TAB)
 #define SF2SP LSFT_T(KC_SPC)
-#define SF2DE LSFT_T(KC_DEL)
+#define SF2ENT LSFT_T(KC_ENT)
 #define CTR2F11 MT(MOD_LCTL, KC_F11)
 #define SF2F12 MT(MOD_LSFT, KC_F12)
-#define CMDSP LGUI(KC_SPC)       // GUI + Space
-#define GUI_BS LGUI(KC_BSPC)     // GUI + BS
+#define CMDSP LGUI(KC_SPC)    // GUI + Space
+#define GUI_BS LGUI(KC_BSPC)  // GUI + BS
 #define JP_YEN  KC_INT3       // ¥
 #define SGUI_L SGUI(KC_LEFT)
 #define SFTSP LSFT(KC_SPC)
@@ -68,6 +68,8 @@ enum custom_keycodes {
 #define CTL_Z RCTL(KC_Z)
 #define SCP LSFT(LCTL(KC_P))
 
+#define SF2DE LSFT_T(KC_DEL)
+
 #define GUI_LC LGUI(JP_LCBR)     // GUI + {
 #define GUI_RC LGUI(JP_RCBR)     // GUI + }
 #define ALT_ENT LALT(KC_ENT)     // Alt + Enter
@@ -75,9 +77,6 @@ enum custom_keycodes {
 #define SGUI_2 SGUI(KC_2)        // Screen Shot
 #define SGUI_5 SGUI(KC_5)        // Screen Shot
 #define SGUI_7 SGUI(KC_7)        // Screen Shot
-
-#define JP_YEN  KC_INT3       // ¥
-#define SGUI_L SGUI(KC_LEFT)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -98,9 +97,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-------------------------------------------------------.                    ,------------------------------------------------------.
       JPZKHK,  XXXXXXX,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSPC,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
-      CTR2F11, SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI, KC_F10,                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, KC_ENT,
+      CTR2F11, SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI, XXXXXXX,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, KC_ENT,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
-      KC_LSFT, CTL_Z,     CTL_X,   CTL_C,   CTL_V,   XXXXXXX,                      KC_UNDS, KC_DEL,  XXXXXXX, XXXXXXX, XXXXXXX, KC_RSFT,
+      KC_LSFT, CTL_Z,     CTL_X,   CTL_C,   CTL_V,   XXXXXXX,                      XXXXXXX, KC_DEL,  XXXXXXX, XXXXXXX, XXXXXXX, KC_RSFT,
   //|--------+----------+--------+--------+--------+--------+--------|  |--------+---------+--------+--------+--------+--------+--------|
                                             QK_BOOT, XXXXXXX, XXXXXXX,    CMDSP, KC_BSPC, KC_RALT
                                         //`--------------------------'  `--------------------------'
@@ -112,21 +111,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|---------+--------+---------+--------+--------+--------|                     |--------+--------+--------+--------+--------+--------|
       KC_LCTL, KC_SLSH, KC_LABK, KC_RABK,  KC_MINS, KC_EQL,                        KC_COLN, KC_QUOT,  KC_LBRC, KC_RBRC, KC_BSLS, KC_ENT,
   //|---------+--------+---------+--------+--------+--------|                     |--------+--------+--------+--------+--------+--------|
-      KC_LSFT, KC_HOME, KC_PGDN,  KC_PGUP, KC_END,  KC_PLUS,                       KC_PIPE, KC_DQT,   XXXXXXX, XXXXXXX, JP_YEN,  KC_RSFT,
+      KC_LSFT, KC_GRV,  KC_TILD, KC_NO,    KC_UNDS, KC_PLUS,                       KC_PIPE, KC_DQT,   XXXXXXX, XXXXXXX, JP_YEN,  KC_RSFT,
   //|---------+--------+---------+--------+--------+--------+--------|  |---------+--------+--------+--------+--------+--------+--------|
-                                            KC_LGUI, KC_LSFT, KC_LSFT,    JIS_TO_US, XXXXXXX, US_TO_JIS
+                                            KC_LGUI, MO(3),   KC_LSFT,    JIS_TO_US, XXXXXXX, US_TO_JIS
                                         //`--------------------------'  `-----------------------------'
   ),
 
   [3] = LAYOUT_split_3x6_3(
   //,-------------------------------------------------------.                    ,------------------------------------------------------.
-      JPZKHK,  XXXXXXX,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,     KC_BSLS,
+      XXXXXXX, XXXXXXX,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                        KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_CAPS, KC_BSPC,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
-      CTR2F11, SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI, KC_F10,                       KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS, _______,
+      KC_LCTL, KC_F12,    KC_F11,  KC_F10,  KC_LGUI, XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  KC_RCTL, KC_ENT,
   //|--------+----------+--------+--------+--------+--------|                    |---------+--------+--------+--------+--------+--------|
-      _______, CTL_Z,     CTL_X,   CTL_C,   CTL_V,   XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP, KC_END,  XXXXXXX, _______,
+      KC_LSFT, XXXXXXX,   XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_RSFT,
   //|--------+----------+--------+--------+--------+--------+--------|  |--------+---------+--------+--------+--------+--------+--------|
-                                            QK_BOOT, XXXXXXX, KC_LSFT,    CMDSP, KC_BSPC, KC_LALT
+                                            XXXXXXX, XXXXXXX, XXXXXXX,    KC_LSFT, KC_BSPC, KC_LALT
                                         //`--------------------------'  `--------------------------'
   )
 };
