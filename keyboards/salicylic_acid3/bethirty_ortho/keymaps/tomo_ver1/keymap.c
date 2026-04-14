@@ -73,22 +73,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LCTL, GUIDEL,  ALTTAB,  LT(1, KC_ENT),    SF2SP,       MO(2), KC_RALT, KC_RGUI, JPZKHK
     ),
     [1] = LAYOUT(
-        KC_ESC,    KC_F2,   KC_F3,   KC_F4,      KC_F5,  KC_F6,   KC_F7,   KC_F8,   KC_F9,   SCP,
-        SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI,    KC_NO,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_MINS,
-        CTL_Z,     CTL_X,   CTL_C,   CTL_V,      KC_NO,  KC_NO,   KC_DEL,  KC_NO,   KC_NO,   KC_NO,
-        JIS_TO_US, KC_NO,   KC_NO,   KC_NO,          KC_LSFT,      KC_BSPC, KC_RALT, KC_RGUI, KC_NO
+        KC_ESC,    KC_F2,   KC_F3,   KC_F4,      KC_F5,  KC_F6,   KC_F7,   KC_F8,   KC_F9,    SCP,
+        SF2F12,    SGUI_L,  GUI_BS,  KC_LGUI,    KC_NO,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,  KC_MINS,
+        CTL_Z,     CTL_X,   CTL_C,   CTL_V,      KC_NO,  KC_NO,   KC_DEL,  KC_NO,   KC_NO,    KC_NO,
+        JIS_TO_US, KC_NO,   KC_NO,   KC_NO,          KC_LSFT,      KC_BSPC, KC_RALT, KC_RGUI, KC_RCTL
     ),
     [2] = LAYOUT(
         KC_1,      KC_2,    KC_3,    KC_4,       KC_5,      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-        KC_SLSH,   KC_LABK, KC_RABK, KC_MINS,    KC_EQL,    KC_COLN, KC_QUOT, KC_LBRC, KC_RBRC, MT(MOD_RCTL, KC_BSLS),
+        KC_SLSH,   KC_LABK, KC_RABK, KC_MINS,    KC_EQL,    KC_COLN, KC_QUOT, KC_LBRC, KC_RBRC, KC_BSLS,
         KC_GRV,    KC_TILD, KC_NO,   KC_UNDS,    KC_PLUS,   KC_PIPE, KC_DQT,  KC_NO,   KC_NO,   JP_YEN,
-        US_TO_JIS, KC_LGUI, KC_LALT, MO(3),          KC_LSFT,        KC_NO,   KC_NO,   KC_NO,   KC_NO
+        KC_LCTL,   KC_LGUI, KC_LALT, MO(3),          KC_LSFT,        KC_NO,   KC_NO,   KC_NO,   KC_NO
     ),
     [3] = LAYOUT(
         KC_NO,     KC_F2,   KC_F3,   KC_F4,      KC_F5,  KC_F6,      KC_F7,   KC_F8,   KC_F9,    KC_CAPS,
-        KC_F12,    KC_F11,  KC_F10,  KC_NO,      KC_NO,  KC_HOME,    KC_PGDN, KC_PGUP, KC_END,   KC_RCTL,
+        KC_F12,    KC_F11,  KC_F10,  KC_NO,      KC_NO,  KC_HOME,    KC_PGDN, KC_PGUP, KC_END,   KC_NO,
         KC_NO,     KC_NO,   KC_NO,   KC_NO,      KC_NO,  KC_NO,      KC_NO,   KC_NO,   KC_NO,    KC_NO,
-        KC_NO,     KC_NO,   KC_NO,   KC_NO,          KC_LSFT,        KC_NO,   KC_RALT, KC_RGUI,  KC_NO
+        US_TO_JIS, KC_NO,   KC_NO,   KC_NO,          KC_LSFT,        KC_NO,   KC_RALT, KC_RGUI,  KC_RCTL
     ),
     [4] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______, _______, _______,  _______,
